@@ -43,5 +43,22 @@ module.exports = function(environment) {
 
   }
 
+  ENV.contentSecurityPolicy = {
+    'default-src' : "'none'",
+    'script-src'  : `'self' 'unsafe-inline' 'unsafe-eval' ${ENV.VM_LIVE_RELOAD} ` +
+                    "https://widget.intercom.io https://js.intercomcdn.com",
+    'font-src'    : "'self' https://fonts.gstatic.com",
+    'connect-src' : `'self' ${ENV.ANALYTICS_URL} ${ENV.CAPCOM_URL} ` +
+                    `${ENV.VM_LIVE_RELOAD} https://api-ping.intercom.io ` +
+                    "https://nexus-websocket-a.intercom.io " +
+                    "https://nexus-websocket-b.intercom.io " +
+                    "wss://nexus-websocket-a.intercom.io " +
+                    "wss://nexus-websocket-b.intercom.io " +
+                    "https://api-iam.intercom.io",
+    'img-src'     : "'self' https://js.intercomcdn.com  data:",
+    'style-src'   : "'self' 'unsafe-inline' https://fonts.googleapis.com/css?family=Lato",
+    'media-src'   : "'self'"
+  };
+
   return ENV;
 };
