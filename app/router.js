@@ -6,7 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('pair');
+  this.route('pair', { path: '/pair'});
 });
 
 export default Router;
