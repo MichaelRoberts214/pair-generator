@@ -1,6 +1,10 @@
 <h3>Pairing</h3>
 <ul>
   {{#each model as |user|}}
-    <li>{{user.name}} {{user.here}}</li>
+    <li>
+      <button class={{if user.here "present" "absent"}}>
+        {{user.name}}
+      </button>
+    </li>
   {{/each}}
 </ul>

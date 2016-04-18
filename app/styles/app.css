@@ -28,3 +28,11 @@ li {
 li:hover {
   background-color: rgba(60, 148, 139, 0.2);
 }
+
+.present {
+  background-color: green;
+}
+
+.absent {
+  background-color: red;
+}
