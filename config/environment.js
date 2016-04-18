@@ -19,12 +19,14 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.BACKEND_URL = 'http://0.0.0.0/8080';
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.BACKEND_URL = 'https://polar-headland-1413.herokuapp.com';
   }
 
   if (environment === 'test') {
