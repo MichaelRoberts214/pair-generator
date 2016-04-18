@@ -30,7 +30,7 @@ li:hover {
 }
 
 .present {
-  background-color: green;
+  background-color: rgba(60, 148, 139, 1);
 }
 
 .absent {
