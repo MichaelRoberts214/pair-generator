@@ -19,7 +19,7 @@ module.exports = function(environment) {
     }
   };
 
-  ENV.BACKEND_URL = 'http://0.0.0.0/8080';
+  ENV.BACKEND_URL = 'http://0.0.0.0:8080';
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
