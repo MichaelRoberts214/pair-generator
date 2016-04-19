@@ -46,7 +46,7 @@ export default Ember.Controller.extend({
           pairs.pushObject(pairString);
           n = roster.length;
         }
-      };
+      }
     }
   }
 });
