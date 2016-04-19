@@ -10,3 +10,10 @@
 </ul>
 <h3>Pairing</h3>
 <button {{action 'generatePairs'}}>Generate Pairs</button>
+<ul class="list">
+  {{#each pairs as |pair|}}
+    <li>
+      {{pair}}
+    </li>
+  {{/each}}
+</ul>

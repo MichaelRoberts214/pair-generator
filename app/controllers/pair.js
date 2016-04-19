@@ -15,12 +15,14 @@ export default Ember.Controller.extend({
     },
 
     generatePairs: function () {
-      var pairs = [];
+      this.set('pairs', []);
+      var pairs = this.get('pairs');
+      var roster = this.get('roster').slice();
       var n = roster.length;
 
       while (n > 0) {
         if (n === 1) {
-          pairs.push(roster[0]);
+          pairs.pushObject(roster[0]);
           n = 0;
         } else {
           var ind = Math.round(Math.random() * (n - 1));
@@ -29,7 +31,8 @@ export default Ember.Controller.extend({
             ind2 = Math.round(Math.random() * (n - 1));
           }
           var pairString = '';
-          pairString = pairString + roster.splice(ind, 1);
+          pairString = pairString + roster[ind].get('name');
+          roster.splice(ind, 1).get('name');
           if (ind < ind2) {
             let temp = ind2 - 1;
             ind2 = temp >= n ? 0 : temp;
@@ -38,23 +41,12 @@ export default Ember.Controller.extend({
           } else {
             ind2 = 0;
           }
-          pairString = pairString + ", " + roster.splice(ind2, 1);
-          pairs.push(pairString);
+          pairString = pairString + ", " + roster[ind2].get('name');
+          roster.splice(ind2, 1);
+          pairs.pushObject(pairString);
           n = roster.length;
         }
-      }
-
-      function makeUL(array) {
-        var list = document.createElement('ul');
-        for(var i = 0; i < array.length; i++) {
-          var item = document.createElement('li');
-          item.appendChild(document.createTextNode(array[i]));
-          list.appendChild(item);
-        }
-        return list;
-      }
-      document.getElementById('list').appendChild(makeUL(pairs));
-
+      };
     }
   }
 });
