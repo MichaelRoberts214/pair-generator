@@ -13,24 +13,45 @@ a {
   text-decoration: none;
 }
 
-#list {
+.name-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.name-list > li {
+  display: inline;
+}
+
+.list {
   text-align: center;
 }
 
-#list > ul {
+.list > ul {
   padding: 0;
 }
 
 li {
   list-style: none;
+  padding: 0.5em;
 }
 
 li:hover {
   background-color: rgba(60, 148, 139, 0.2);
 }
 
+button {
+  border-radius: 5px;
+  padding: 0.5em;
+  border: none;
+}
+
 .present {
   background-color: rgba(60, 148, 139, 1);
+}
+
+.present:hover {
+  background-color: rgba(60, 148, 139, 0.2);
 }
 
 .absent {
