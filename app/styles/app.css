@@ -8,6 +8,11 @@ header {
   color: #14232b;
 }
 
+h1, h2, h3 {
+  margin: 0.3em auto;
+  text-align: center;
+}
+
 a {
   color: #3c948b;
   text-decoration: none;
@@ -25,6 +30,7 @@ a {
 
 .list {
   text-align: center;
+  padding-left: 0;
 }
 
 .list > ul {
@@ -38,6 +44,10 @@ li {
 
 .list > li:hover {
   background-color: rgba(60, 148, 139, 0.2);
+}
+
+.pairing {
+  text-align: center;
 }
 
 button {
