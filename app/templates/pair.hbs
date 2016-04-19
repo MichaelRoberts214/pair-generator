@@ -2,7 +2,7 @@
 <ul class="name-list">
   {{#each model as |user|}}
     <li>
-      <button class={{if user.here "present" "absent"}}>
+      <button class={{if user.here "present" "absent"}} {{action 'presentToggle' user}}>
         {{user.name}}
       </button>
     </li>
