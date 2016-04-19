@@ -36,7 +36,7 @@ li {
   padding: 0.5em;
 }
 
-li:hover {
+.list > li:hover {
   background-color: rgba(60, 148, 139, 0.2);
 }
 
