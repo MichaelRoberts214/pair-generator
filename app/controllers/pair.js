@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  pairs: Ember.A([]),
+
   actions: {
     presentToggle: function (user) {
       user.toggleProperty('here');
@@ -9,6 +11,10 @@ export default Ember.Controller.extend({
       }, function (error) {
         console.error(error);
       });
+    },
+
+    generatePairs: function () {
+      //
     }
   }
 });
