@@ -27,6 +27,13 @@ a {
   text-decoration: none;
 }
 
+button {
+  margin: 0;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+}
+
 .center-group {
   text-align: center;
 }
