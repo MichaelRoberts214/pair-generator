@@ -22,7 +22,7 @@ export default Ember.Controller.extend({
 
       while (n > 0) {
         if (n === 1) {
-          pairs.pushObject(roster[0]);
+          pairs.pushObject(roster[0].get('name'));
           n = 0;
         } else {
           var ind = Math.round(Math.random() * (n - 1));
