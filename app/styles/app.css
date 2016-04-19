@@ -108,3 +108,7 @@ li {
 .absent {
   background-color: #944f3c;
 }
+
+.absent:hover {
+  background-color: rgba(148, 79, 60, 0.4);
+}
