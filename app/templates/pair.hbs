@@ -1,13 +1,13 @@
 <h3>Available</h3>
-<ul class="name-list">
-  {{#each model as |user|}}
-    <li>
+<div class="center-group">
+  <div class="name-list clearfix">
+    {{#each model as |user|}}
       <button class={{if user.here "present" "absent"}} {{action 'presentToggle' user}}>
         {{user.name}}
       </button>
-    </li>
-  {{/each}}
-</ul>
+    {{/each}}
+  </div>
+</div>
 <div class="pairing">
   <h3>Pairing</h3>
   <button {{action 'generatePairs'}}>Generate Pairs</button>

@@ -1,3 +1,12 @@
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   background-color: #e1e3e4;
@@ -18,14 +27,35 @@ a {
   text-decoration: none;
 }
 
-.name-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.center-group {
+  text-align: center;
 }
 
-.name-list > li {
-  display: inline;
+.name-list {
+  list-style: none;
+  margin: 0 auto;
+  width: inherit;
+  padding: 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.name-list > button {
+  margin: 0;
+  padding: 0.5em;
+  border: none;
+  display: block;
+  float: left;
+}
+
+.name-list > button:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.name-list > button:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .list {
@@ -48,12 +78,6 @@ li {
 
 .pairing {
   text-align: center;
-}
-
-button {
-  border-radius: 5px;
-  padding: 0.5em;
-  border: none;
 }
 
 .present {
